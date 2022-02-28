@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    
+    <title>
+        <main>Blog</main>
+    </title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
         <!-- CSS  -->
@@ -55,55 +59,8 @@
     
                             </div>
                             <div class="card-body">
-                                <table width="100%">
-                                    <thead>
-                                        <tr>
-                                            <td>Date</td>
-                                            <td>Blogs </td>
-                                            
-                                            
-                                            
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td rowspan="2">21/02/2022</td> 
-                                            <td><b>Setting up a MySQL database using Prisma</b>
-                                            </td></tr>
-                                            <tr>
-                                            <td><span class="las la-book"></span>
-                                                A walkthrough on how to set up a MySQL database using Prisma ORM through serverless functions
-                                                </td>                                           
-                                        </tr>
-
-                                        <tr>
-                                            <td rowspan="2">21/02/2022</td> 
-                                            <td><b>How to use the tailwindcss typography plugin</b>
-                                            </td></tr>
-                                            <tr>
-                                            <td><span class="las la-book"></span>
-                                                A tutorial on the tailwindcss/typography plugin which uses a set of prose classes to create beautiful typographic defaults
-                                            </td>                                           
-                                        </tr>
-                                        
-                                        <tr>
-                                            <td rowspan="2">21/02/2022</td> 
-                                            <td><b>Setting up a MySQL database using Prisma</b>
-                                            </td></tr>
-                                            <tr>
-                                            <td><span class="las la-book"></span>
-                                                A walkthrough on how to set up a MySQL database using Prisma ORM through serverless functions
-                                                </td>                                           
-                                        </tr>
-                                        
-                                        
-                                              
-                                            
-                                        </tr>
-                                    </tbody>
-    
-                                </table>
-    
+                               <ul id="blogs">
+                               </ul>
                             </div>
     
                         </div>
@@ -112,5 +69,21 @@
                     </div>
                     </div>
                     </center>
+                    <script>
+                        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+    apiKey: "AIzaSyAfIRAQZe7a8wfuxzQBPOhp85A-vSP_uh8",
+    authDomain: "blog-d990f.firebaseapp.com",
+    projectId: "blog-d990f",
+    storageBucket: "blog-d990f.appspot.com",
+    messagingSenderId: "554054001432",
+    appId: "1:554054001432:web:396b76593255b39456b46d",
+    measurementId: "G-C7QRHX21MK"
+  };
+  firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+db.settings({ timestampInSnapshots: true });
+                    </script>
+                    <script src="main.js"></script>
                     </body>
                     </html>
