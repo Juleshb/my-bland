@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <TItle>Adimin</TItle>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    
+        <link rel="stylesheet" href="dstyle.css">
+
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="sidebar-brand">
+                <h1><!--<span class="lab la-accusoft">--></span>Jules hb 250</h1>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="dash.html" ><span class="las la-igloo"></span>
+                        <span>Dashboard</span></a>
+                    </li>
+                    
+                    <li>
+                        <a href="postblog.html" ><span class="las la-clipboard-list"></span>
+                        <span>Blogs</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="las la-book"></span>
+                        <span>Services</span></a>
+                    </li>
+                    <li>
+                        <a href="" class=""><span class="las la-users"></span>
+                        <span>Customers</span></a>
+                    </li>
+                    <li>
+                        <a href="mes.html" class="active"><span class="las la-comment"></span>
+                        <span>Messages</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="las la-user-circle"></span>
+                        <span>Admins</span></a>
+                    </li>
+                    <li>
+                        <a href="/index.html"><span class="las la-home"></span>
+                        <span>View page</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+        <header>
+            <h1>
+                <label for="">
+                  <span class="las la-bars"></span> 
+                </label>
+                Dashboard
+            </h1>
+            <div class="search-wrapper">
+                <span class="las la-search"></span>
+                <input type="search" placeholder="search here"/>
+
+            </div>
+            <div class="user-wrapper">
+                <img src="kk.jpg" width="30px" alt="Adimin">
+                <div>
+                    <h4>Jules hb</h4>
+                    <small>Adimin</small>
+                </div>
+
+            </div>
+        </header>
+        <main>
+            <div class="cards">
+                
+                
+                
+
+
+            </div> 
+            <div class="recent-grid">
+                <div class="projects">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Messages</h3>
+                            <button>See all <span class="las la-arrow-right"></span></button> 
+
+                        </div>
+                        <div class="card-body">
+                         <table id="blogs" width="100%">
+                            <thead>
+                                <tr>
+                                    <td>Emails</td>
+                                    <td>Messages</td>
+                                    
+                                    
+                                    
+                                </tr>
+                                   
+                                </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                </div>
+        </main>
+        </div>
+        <script>
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: "AIzaSyAfIRAQZe7a8wfuxzQBPOhp85A-vSP_uh8",
+authDomain: "blog-d990f.firebaseapp.com",
+projectId: "blog-d990f",
+storageBucket: "blog-d990f.appspot.com",
+messagingSenderId: "554054001432",
+appId: "1:554054001432:web:396b76593255b39456b46d",
+measurementId: "G-C7QRHX21MK"
+};
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+db.settings({ timestampInSnapshots: true });
+        </script>
+        <script src="sms.js"></script>
+    </body>
+</html>
