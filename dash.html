@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <TItle>Adimin</TItle>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    
+        <link rel="stylesheet" href="dstyle.css">
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="sidebar-brand">
+                <h1><!--<span class="lab la-accusoft">--></span>Jules hb 250</h1>
+            </div>
+            <div class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="" class="active"><span class="las la-igloo"></span>
+                        <span>Dashboard</span></a>
+                    </li>
+                    
+                    <li>
+                        <a href="postblog.html"><span class="las la-clipboard-list"></span>
+                        <span>Blogs</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="las la-book"></span>
+                        <span>Services</span></a>
+                    </li>
+                    <li>
+                        <a href="" class=""><span class="las la-users"></span>
+                        <span>Customers</span></a>
+                    </li>
+                    <li>
+                        <a href="mes.html"><span class="las la-comment"></span>
+                        <span>Messages</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="las la-user-circle"></span>
+                        <span>Admins</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span class="las la-home"></span>
+                        <span>View page</span></a>
+                    </li>
+                    <li>
+                        <a href="/login.html"><span class="las la-sign"></span>
+                        <span>Log out</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+        <header>
+            <h1>
+                <label for="">
+                  <span class="las la-bars"></span> 
+                </label>
+                Dashboard
+            </h1>
+            <div class="search-wrapper">
+                <span class="las la-search"></span>
+                <input type="search" placeholder="search here"/>
+
+            </div>
+            <div class="user-wrapper">
+                <img src="kk.jpg" width="30px" alt="Adimin">
+                <div>
+                    <h4>Jules hb</h4>
+                    <small>Adimin</small>
+                </div>
+
+            </div>
+        </header>
+        <main>
+            <div class="cards">
+                <div class="card-single">
+                <div>
+                    <h1>54</h1>
+                    <span>Customers</span>
+                </div>
+                <div>
+                    <span class="las la-users"></span>
+                </div>
+                </div>
+
+                <div class="card-single">
+                    <div>
+                        <h1>54</h1>
+                        <span>Blogs</span>
+                    </div>
+                    <div>
+                        <span class="las la-clipboard-list"></span>
+                    </div>
+                </div>
+
+                    <div class="card-single">
+                        <div>
+                            <h1>54</h1>
+                            <span>Comments</span>
+                        </div>
+                        <div>
+                            <span class="las la-comment"></span>
+                        </div>
+                    </div>
+
+                        <div class="card-single">
+                            <div>
+                                <h1>54k</h1>
+                                <span>Likes</span>
+                            </div>
+                            <div>
+                                <span class="las la-heart"></span>
+                            </div>
+                        </div>
+
+
+            </div> 
+            <div class="recent-grid">
+                <div class="projects">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Recent Belog</h3>
+                            <button>See all <span class="las la-arrow-right"></span></button> 
+
+                        </div>
+                        <div class="card-body">
+                            <table id="blogs">
+                                <tr>
+                                 <td>Date</td>
+                                 <td>title</td>
+                                 <td>content</td>
+                                </tr>
+                            </table>
+                           <!-- <table id="blogs">
+                                <thead>
+                                    <tr>
+                                        <td>Blog title</td>
+                                        <td>Status</td>
+                                        <td>Date</td>
+                                        
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>UI/UX Design</td>
+                                        <td><span class="status orange"></span>
+                                            Published
+                                            </td>
+                                        <td>21/02/2022</td>
+                                        <td><span class="las la-edit"></span><span class="las la-eye"></span><span class="las la-trash"></span></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>UI/UX Design</td>
+                                        <td><span class="status purple"></span>
+                                            In progress 
+                                            </td>
+                                        <td>21/02/2022</td>
+                                        <td><span class="las la-edit"></span><span class="las la-eye"></span><span class="las la-trash"></span></td>
+
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>UI/UX Design</td>
+                                        <td><span class="status pink"></span>
+                                            Review 
+                                            </td>
+                                        <td>21/02/2022</td>
+                                        <td><span class="las la-edit"></span><span class="las la-eye"></span><span class="las la-trash"></span></td>
+
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>UI/UX Design</td>
+                                        <td><span class="status orange"></span>
+                                            Published
+                                            </td>
+                                        <td>21/02/2022</td>
+                                        <td><span class="las la-edit"></span><span class="las la-eye"></span><span class="las la-trash"></span></td>
+
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>UI/UX Design</td>
+                                        <td><span class="status purple"></span>
+                                            Inprogress
+                                            </td>
+                                        <td>21/02/2022</td>
+                                        <td><span class="las la-edit"></span><span class="las la-eye"></span><span class="las la-trash"></span></td>
+
+                                        
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                            -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="customers">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>New Customers</h3>
+                            <button>See all <span class="las la-arrow-right"></span></button> 
+                        </div>
+                        <div class="card-body">
+                            <div class="customer">
+                             <div>
+                                <img src="kk.jpg" width="40px" height="40px" alt="">
+                             <div>
+                                 <h4>Simon peter</h4>
+                                 <small>COE NPS</small>
+                             </div>
+                            </div>
+                            <div>
+                                <span class="las la-user-circle"></span>
+                                <span class="las la-comment"></span>
+                                <span class="las la-phone"></span>
+                            </div>
+                            </div>
+                            <div class="customer">
+                                <div>
+                                   <img src="kk.jpg" width="40px" height="40px" alt="">
+                                <div>
+                                    <h4>Simon peter</h4>
+                                    <small>COE NPS</small>
+                                </div>
+                               </div>
+                               <div>
+                                   <span class="las la-user-circle"></span>
+                                   <span class="las la-comment"></span>
+                                   <span class="las la-phone"></span>
+                               </div>
+                               </div>
+                               <div class="customer">
+                                <div>
+                                   <img src="kk.jpg" width="40px" height="40px" alt="">
+                                <div>
+                                    <h4>Simon peter</h4>
+                                    <small>COE NPS</small>
+                                </div>
+                               </div>
+                               <div>
+                                   <span class="las la-user-circle"></span>
+                                   <span class="las la-comment"></span>
+                                   <span class="las la-phone"></span>
+                               </div>
+                               </div>
+                               <div class="customer">
+                                <div>
+                                   <img src="kk.jpg" width="40px" height="40px" alt="">
+                                <div>
+                                    <h4>Simon peter</h4>
+                                    <small>COE NPS</small>
+                                </div>
+                               </div>
+                               <div>
+                                   <span class="las la-user-circle"></span>
+                                   <span class="las la-comment"></span>
+                                   <span class="las la-phone"></span>
+                               </div>
+                               </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                </div>
+        </main>
+        </div>
+        <script src="main.js"></script>
+        <script src="dash.js"></script>
+    </body>
+</html>
