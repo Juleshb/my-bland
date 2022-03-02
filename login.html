@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    
+
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+        <script src="login.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
         <!-- CSS  -->
@@ -30,11 +33,11 @@
     
 <div class="form">
     <h2>Login form</h2>
-    <input type="email" name="email" placeholder="Enter Email Here">
+    <input type="email" id="email" name="email" placeholder="Enter Email Here">
     <br>
-    <input type="password" name="password" placeholder="Enter your password here">
+    <input type="password" id="pass" name="password" placeholder="Enter your password here">
     <br>
-    <button class="btnn"><a href="/Dashboard/dash.html">Login</a></button>
+    <button class="btnn" id="save"><a href="/Dashboard/dash.html">Login</a></button>
     <p>If you dont hava an account create new account <a href="signup.html">here</a></p>
     
 
