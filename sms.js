@@ -10,19 +10,19 @@ function renderBlog(doc) {
     let content = document.createElement('td');
     let title = document.createElement('td');
 
-    
+    let del = document.createElement('button');
 
     td.setAttribute('data-id', doc.id);
     date.textContent = doc.data().date;
     title.textContent = doc.data().title;
     content.textContent = doc.data().content;
-    
+    del.textContent = 'Delete';
 
 
     td.appendChild(date);
     td.appendChild(title);
     td.appendChild(content);
-   
+    td.append(del);
 
 
     blog.appendChild(td);
@@ -33,7 +33,7 @@ function renderBlog(doc) {
     
 }
 
-db.collection('blog').get().then((snapshot) => {
+db.collection('message').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderBlog(doc);
     })
@@ -42,13 +42,13 @@ db.collection('blog').get().then((snapshot) => {
   //saving data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('blog').add({
-      date: form.date.value,
-      title: form.title.value,
-      content: form.content.value
+    db.collection('message').add({
+      email: form.email.value,
+      sms: form.sms.value,
+      
     })
-    form.date.value = '';
-    form.title.value = '';
-    form.content.value = '';
+    form.email.value = '';
+    form.sms.value = '';
+    
   })
   

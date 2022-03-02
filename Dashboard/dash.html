@@ -3,6 +3,8 @@
     <head>
     <meta charset="UTF-8">
     <TItle>Adimin</TItle>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     
         <link rel="stylesheet" href="dstyle.css">
@@ -32,8 +34,8 @@
                         <span>Customers</span></a>
                     </li>
                     <li>
-                        <a href=""><span class="las la-comment"></span>
-                        <span>Comments</span></a>
+                        <a href="mes.html"><span class="las la-comment"></span>
+                        <span>Messages</span></a>
                     </li>
                     <li>
                         <a href=""><span class="las la-user-circle"></span>
@@ -42,6 +44,10 @@
                     <li>
                         <a href=""><span class="las la-home"></span>
                         <span>View page</span></a>
+                    </li>
+                    <li>
+                        <a href="/login.html"><span class="las la-sign"></span>
+                        <span>Log out</span></a>
                     </li>
                 </ul>
             </div>
@@ -121,7 +127,14 @@
 
                         </div>
                         <div class="card-body">
-                            <table width="100%">
+                            <table id="blogs">
+                                <tr>
+                                 <td>Date</td>
+                                 <td>title</td>
+                                 <td>content</td>
+                                </tr>
+                            </table>
+                           <!-- <table id="blogs">
                                 <thead>
                                     <tr>
                                         <td>Blog title</td>
@@ -184,6 +197,7 @@
                                 </tbody>
 
                             </table>
+                            -->
 
                         </div>
 
@@ -261,5 +275,7 @@
                 </div>
         </main>
         </div>
+        <script src="main.js"></script>
+        <script src="dash.js"></script>
     </body>
 </html>
