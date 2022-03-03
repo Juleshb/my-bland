@@ -42,51 +42,29 @@
     </div>
 </div> 
 
-<div class="about" id="bout">
-    
-    <h2>Wellcome to my Blog </h2>
-</div>
-        
-    
-    
-                    </div>
-                    <div class="recent-grid">
-                    <div class="projects">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3>Recent Belog</h3>
-                                <button>See all <span class="las la-arrow-right"></span></button> 
-    
-                            </div>
-                            <div class="card-body">
-                               
-                               <div class="project" id="pr">
-                                
-                                
-                            
-                                
-    
-                        </div>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    </center>
-                    <script>
-                        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        <section>
+            <p class="title" id="title"></p>
+            <p class="author-date" id="author-date"></p>
+            <img src="" id="image" style="width: 100%">
+            <p id="post-body"></p>
+        </section>
+    </div>
+    <script>
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyAfIRAQZe7a8wfuxzQBPOhp85A-vSP_uh8",
-    authDomain: "blog-d990f.firebaseapp.com",
-    projectId: "blog-d990f",
-    storageBucket: "blog-d990f.appspot.com",
-    messagingSenderId: "554054001432",
-    appId: "1:554054001432:web:396b76593255b39456b46d",
-    measurementId: "G-C7QRHX21MK"
-  };
-  firebase.initializeApp(firebaseConfig);
+apiKey: "AIzaSyAfIRAQZe7a8wfuxzQBPOhp85A-vSP_uh8",
+authDomain: "blog-d990f.firebaseapp.com",
+projectId: "blog-d990f",
+storageBucket: "blog-d990f.appspot.com",
+messagingSenderId: "554054001432",
+appId: "1:554054001432:web:396b76593255b39456b46d",
+measurementId: "G-C7QRHX21MK"
+};
+firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 db.settings({ timestampInSnapshots: true });
-                    </script>
-                    <script src="main.js"></script>
-                    </body>
-                    </html>
+    </script>
+
+    <script src="more.js"></script>
+</body>
+</html>
