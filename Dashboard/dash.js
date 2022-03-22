@@ -11,18 +11,23 @@ function renderBlog(doc) {
     let title = document.createElement('td');
 
     let del = document.createElement('button');
+    let update = document.createElement('button');
 
     td.setAttribute('data-id', doc.id);
     date.textContent = doc.data().date;
     title.textContent = doc.data().title;
     content.textContent = doc.data().content;
     del.textContent = 'Delete';
+    update.textContent = "Update";
+
+          
 
 
     td.appendChild(date);
     td.appendChild(title);
     td.appendChild(content);
     td.append(del);
+    td.append(update);
 
 
     blog.appendChild(td);
@@ -35,7 +40,12 @@ function renderBlog(doc) {
         db.collection('blog').doc(id).delete();
 
     })
+// Uppdating data
 
+update.addEventListener('click', (e) => {
+  e.preventDefault();
+  location.href = "update.html#"+doc.id;
+})
 
     
 }
